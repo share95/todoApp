@@ -12,7 +12,7 @@ function Tasks() {
   });
   useEffect(() => {
     axios
-      .get("/tasks/")
+      .get("/tasks")
       // .then((response) => response.json())
       .then((data) => {
         setTaskList(data);

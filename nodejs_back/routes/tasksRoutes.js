@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 const { getTasks, createTask, getTask, updateTask, setTaskCompletedStatus, deleteTask } = require("../controllers/TasksController");
 const validateToken = require("../middleware/validateTokenHandler");
+// const allowOptionsRequests = require("../middleware/allowOptionsRequest");
 
-
+// router.use(allowOptionsRequests);
 router.use(validateToken);
 
 router.get("/", getTasks);
