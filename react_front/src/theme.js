@@ -1,6 +1,15 @@
+import { Paper } from '@mui/material';
 import { red } from '@mui/material/colors';
-import { createTheme } from '@mui/material/styles';
+import { createTheme, styled } from '@mui/material/styles';
 
+
+export const Item = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  textAlign: 'auto',
+  color: theme.palette.text.secondary,
+  height: 60,
+  lineHeight: '60px',
+}));
 // A custom theme for this app
 const theme = createTheme({
     
