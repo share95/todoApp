@@ -1,0 +1,92 @@
+{
+    "info": {
+        "_postman_id": "1b0fac17-6da0-47c9-952d-9a49b464151a",
+        "name": "users",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "register",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:5000/api/users/register",
+                    "path": [
+                        "api",
+                        "users",
+                        "register"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"username\" : \"danilo\",\n  \"password\" : \"12345\",\n  \"email\" : \"danilosarovic@hotmail.com\"\n}"
+                }
+            }
+        },
+        {
+            "name": "login",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:5000/api/users/login",
+                    "path": [
+                        "api",
+                        "users",
+                        "login"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"username\": \"danilo\",\n  \"password\" : \"12345\"\n}"
+                }
+            }
+        },
+        {
+            "name": "loggedUser",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:5000/api/users/logged-user",
+                    "path": [
+                        "api",
+                        "users",
+                        "logged-user"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZGFuaWxvIiwiZW1haWwiOiJkYW5pbG9zYXJvdmljQGhvdG1haWwuY29tIiwiaWQiOiI2NTA5MjAyZWRjOTkyOWQyOWQwZjIwNWQifSwiaWF0IjoxNjk1MDk5MjM1LCJleHAiOjE2OTUxMDI4MzV9.uw0zQIA9j9wLCeEDzUzsMQHa9Px7flQCRACPdICbKsA",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
